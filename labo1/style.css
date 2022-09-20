@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Sue+Ellen+Francisco&display=swap');
+
+body {
+    background-color: #e6d7ff;
+}
+
+nav ul {
+    list-style-type: None;
+    overflow: auto;
+}
+
+nav a {
+    background-color: rgb(87, 83, 83);
+    float: left;
+    padding: 15px;
+    font-family: Nunito;
+}
+
+nav a, a:visited  {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover, a:active {
+    color: indigo;
+    text-decoration: none;
+    background-color: aliceblue;
+}
+
+p {
+    font-family: Nunito;
+}
+
+td {
+    font-family: Nunito;
+}
+
+h1 {
+    font-family: Sue Ellen Francisco;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: Sue Ellen Francisco;
+    font-size: 40px;
+}
+
+h3 {
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+
+}
+
+.produits {
+    margin-top: 50px;
+}
+
+.title_connex {
+    font-family: Sue Ellen Francisco;
+    font-size: 25px;
+}
+
+.bouton_panier {
+    background-color: indigo;
+    border-radius: 30%;
+    color: aliceblue;
+    padding: 10px;
+    border: none;
+}
