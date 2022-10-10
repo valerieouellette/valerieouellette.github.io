@@ -7,17 +7,22 @@ class JeudeCartes {
   }
 
   brassageInterCoupe () {
-    let longueur = this.listeCartes.length
-    let halfLongueur = longueur / 2
-    paquetFirstHalf = this.listeCartes.slice(0,halfLongueur)
-    paquetSecondHalf = this.listeCartes.slice(halfLongueur, longueur)
-    let newPaquet = []
+    let longueur = this.listeCartes.length;
+    let halfLongueur = longueur / 2;
+    paquetFirstHalf = this.listeCartes.slice(0,halfLongueur);
+    paquetSecondHalf = this.listeCartes.slice(halfLongueur, longueur);
+    let newPaquet = [];
     for (let i = 0; i < halfLongueur; i++) {
-      newPaquet.push(paquetFirstHalf[i])
-      newPaquet.push(paquetSecondHalf[i])
+      newPaquet.push(paquetFirstHalf[i]);
+      newPaquet.push(paquetSecondHalf[i]);
     }
-    this.listeCartes = newPaquet
+    this.listeCartes = newPaquet;
   
+  }
+
+  afficher() {
+    let cartes = this.liste_cartes.toString();
+    document.querySelector('#p1').textContent = cartes;
   }
 }
 
@@ -75,10 +80,11 @@ function dicoImages () {
     "K♥" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/King_of_hearts_fr.svg/langfr-300px-King_of_hearts_fr.svg.png",
     "K♣" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/King_of_clubs_fr.svg/langfr-300px-King_of_clubs_fr.svg.png"}
 
-    return dicoImagesCartes
+    return dicoImagesCartes;
 }
 
 
-let cartes = liste_cartes.toString()
-document.querySelector('#p1').textContent = cartes
 
+
+const paquet = new JeudeCartes();
+paquet.afficher();
