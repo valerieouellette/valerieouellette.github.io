@@ -9,8 +9,8 @@ class JeudeCartes {
   brassageInterCoupe () {
     let longueur = this.listeCartes.length;
     let halfLongueur = longueur / 2;
-    paquetFirstHalf = this.listeCartes.slice(0,halfLongueur);
-    paquetSecondHalf = this.listeCartes.slice(halfLongueur, longueur);
+    let paquetFirstHalf = this.listeCartes.slice(0,halfLongueur);
+    let paquetSecondHalf = this.listeCartes.slice(halfLongueur, longueur);
     let newPaquet = [];
     for (let i = 0; i < halfLongueur; i++) {
       newPaquet.push(paquetFirstHalf[i]);
@@ -20,10 +20,6 @@ class JeudeCartes {
   
   }
 
-  afficher() {
-    let cartes = this.liste_cartes.toString();
-    document.querySelector('#p1').textContent = cartes;
-  }
 }
 
 function dicoImages () {
@@ -87,4 +83,14 @@ function dicoImages () {
 
 
 const paquet = new JeudeCartes();
-paquet.afficher();
+paquet.brassageInterCoupe();
+paquet.brassageInterCoupe();
+paquet.brassageInterCoupe();
+paquet.brassageInterCoupe();
+paquet.brassageInterCoupe();
+paquet.brassageInterCoupe();
+paquet.brassageInterCoupe();
+paquet.brassageInterCoupe();
+cartes = paquet.listeCartes;
+cartes = cartes.toString()
+document.querySelector('#p1').textContent = cartes;
