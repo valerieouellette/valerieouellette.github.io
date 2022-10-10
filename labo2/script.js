@@ -1,116 +1,68 @@
-var carreauAs = document.createElement('img');
-carreauAs.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/02_of_diamonds.svg/langfr-300px-02_of_diamonds.svg.png"
-var piqueAs = document.createElement('img');
-piqueAs.src = ""
-var coeurAs = document.createElement('img');
-coeurAs.src = ""
-var trefleAs = document.createElement('img');
-trefleAs.src = ""
-
-var carreau2 = document.createElement('img');
-carreau2.src = ""
-var pique2 = document.createElement('img');
-pique2.src = ""
-var coeur2 = document.createElement('img');
-coeur2.src = ""
-var trefle2 = document.createElement('img');
-trefle2.src = ""
-
-var carreau3 = document.createElement('img');
-carreau3.src = ""
-var pique3 = document.createElement('img');
-pique3.src = ""
-var coeur3 = document.createElement('img');
-coeur3.src = ""
-var trefle3 = document.createElement('img');
-trefle3.src = ""
-
-var carreau4 = document.createElement('img');
-carreau4.src = ""
-var pique4 = document.createElement('img');
-pique4.src = ""
-var coeur4 = document.createElement('img');
-coeur4.src = ""
-var trefle4 = document.createElement('img');
-trefle4.src = ""
-
-var carreau5 = document.createElement('img');
-carreau5.src = ""
-var pique5 = document.createElement('img');
-pique5.src = ""
-var coeur5 = document.createElement('img');
-coeur5.src = ""
-var trefle5 = document.createElement('img');
-trefle5.src = ""
-
-var carreau6 = document.createElement('img');
-carreau6.src = ""
-var pique6 = document.createElement('img');
-pique6.src = ""
-var coeur6 = document.createElement('img');
-coeur6.src = ""
-var trefle6 = document.createElement('img');
-trefle6.src = ""
-
-var carreau7 = document.createElement('img');
-carreau7.src = ""
-var pique7 = document.createElement('img');
-pique7.src = ""
-var coeur7 = document.createElement('img');
-coeur7.src = ""
-var trefle7 = document.createElement('img');
-trefle7.src = ""
-
-var carreau8 = document.createElement('img');
-carreau8.src = ""
-var pique8 = document.createElement('img');
-pique8.src = ""
-var coeur8 = document.createElement('img');
-coeur8.src = ""
-var trefle8 = document.createElement('img');
-trefle8.src = ""
-
-var carreau9 = document.createElement('img');
-carreau9.src = ""
-var pique9 = document.createElement('img');
-pique9.src = ""
-var coeur9 = document.createElement('img');
-coeur9.src = ""
-var trefle9 = document.createElement('img');
-trefle9.src = ""
-
-var carreau10 = document.createElement('img');
-carreau10.src = ""
-var pique10 = document.createElement('img');
-pique10.src = ""
-var coeur10 = document.createElement('img');
-coeur10.src = ""
-var trefle10 = document.createElement('img');
-trefle10.src = ""
+var dicoImagesCartes = {"carreauAs" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/02_of_diamonds.svg/langfr-300px-02_of_diamonds.svg.png",
+"piqueAs" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/01_of_spades_A.svg/langfr-300px-01_of_spades_A.svg.png",
+"coeurAs" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/01_of_hearts_A.svg/langfr-300px-01_of_hearts_A.svg.png",
+"trefleAs" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/01_of_clubs_A.svg/langfr-300px-01_of_clubs_A.svg.png",
+"carreau2" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/02_of_diamonds.svg/langfr-300px-02_of_diamonds.svg.png",
+"pique2" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/02_of_spades.svg/langfr-300px-02_of_spades.svg.png",
+"coeur2.src" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/02_of_hearts.svg/langfr-300px-02_of_hearts.svg.png",
+"trefle2.src" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/02_of_clubs.svg/langfr-300px-02_of_clubs.svg.png",
+"carreau3" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/03_of_diamonds.svg/langfr-300px-03_of_diamonds.svg.png",
+"pique3" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/03_of_spades.svg/langfr-300px-03_of_spades.svg.png",
+"coeur3 ": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/03_of_hearts.svg/langfr-300px-03_of_hearts.svg.png",
+"trefle3" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/03_of_clubs.svg/langfr-300px-03_of_clubs.svg.png",
+"carreau4 ": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/04_of_diamonds.svg/langfr-300px-04_of_diamonds.svg.png",
+"pique4" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/04_of_spades.svg/langfr-300px-04_of_spades.svg.png",
+"coeur4" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/04_of_hearts.svg/langfr-300px-04_of_hearts.svg.png",
+"trefle4" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/04_of_clubs.svg/langfr-300px-04_of_clubs.svg.png",
+"carreau5" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/05_of_diamonds.svg/langfr-300px-05_of_diamonds.svg.png",
+"pique5" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/05_of_spades.svg/langfr-300px-05_of_spades.svg.png",
+"coeur5" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/05_of_hearts.svg/langfr-300px-05_of_hearts.svg.png",
+"trefle5" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/05_of_clubs.svg/langfr-300px-05_of_clubs.svg.png",
+"carreau6" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/06_of_diamonds.svg/langfr-300px-06_of_diamonds.svg.png",
+"pique6" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/06_of_spades.svg/langfr-300px-06_of_spades.svg.png",
+"coeur6" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/06_of_hearts.svg/langfr-300px-06_of_hearts.svg.png",
+"trefle6" : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/06_of_clubs.svg/langfr-300px-06_of_clubs.svg.png",
+"carreau7" : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/07_of_diamonds.svg/langfr-300px-07_of_diamonds.svg.png",
+"pique7" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/07_of_spades.svg/langfr-300px-07_of_spades.svg.png",
+"coeur7" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/07_of_hearts.svg/langfr-300px-07_of_hearts.svg.png",
+"trefle7" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/07_of_clubs.svg/langfr-300px-07_of_clubs.svg.png",
+"carreau8" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/08_of_diamonds.svg/langfr-300px-08_of_diamonds.svg.png",
+"pique8" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/08_of_spades.svg/langfr-300px-08_of_spades.svg.png",
+"coeur8" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/08_of_hearts.svg/langfr-300px-08_of_hearts.svg.png",
+"trefle8" : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/08_of_clubs.svg/langfr-300px-08_of_clubs.svg.png",
+"carreau9" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/09_of_diamonds.svg/langfr-300px-09_of_diamonds.svg.png",
+"pique9" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/09_of_spades.svg/langfr-300px-09_of_spades.svg.png",
+"coeur9" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/09_of_hearts.svg/langfr-300px-09_of_hearts.svg.png",
+"trefle9" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/09_of_clubs.svg/langfr-300px-09_of_clubs.svg.png",
+"carreau10" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/10_of_diamonds_-_David_Bellot.svg/langfr-300px-10_of_diamonds_-_David_Bellot.svg.png",
+"pique10" : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/10_of_spades_-_David_Bellot.svg/langfr-300px-10_of_spades_-_David_Bellot.svg.png",
+"coeur10" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/10_of_hearts_-_David_Bellot.svg/langfr-300px-10_of_hearts_-_David_Bellot.svg.png",
+"trefle10" : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/10_of_clubs_-_David_Bellot.svg/langfr-300px-10_of_clubs_-_David_Bellot.svg.png"
 
 var carreauJ = document.createElement('img');
-carreauJ.src = ""
+carreauJ.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Jack_of_diamonds_fr.svg/langfr-300px-Jack_of_diamonds_fr.svg.png"
 var piqueJ = document.createElement('img');
-piqueJ.src = ""
+piqueJ.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Jack_of_spades_fr.svg/langfr-300px-Jack_of_spades_fr.svg.png"
 var coeurJ = document.createElement('img');
-coeurJ.src = ""
+coeurJ.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Jack_of_hearts_fr.svg/langfr-300px-Jack_of_hearts_fr.svg.png"
 var trefleJ = document.createElement('img');
-trefleJ.src = ""
+trefleJ.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Jack_of_clubs_fr.svg/langfr-300px-Jack_of_clubs_fr.svg.png"
 
 var carreauQ = document.createElement('img');
-carreauQ.src = ""
+carreauQ.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Queen_of_diamonds_fr.svg/langfr-300px-Queen_of_diamonds_fr.svg.png"
 var piqueQ = document.createElement('img');
-piqueQ.src = ""
+piqueQ.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Queen_of_spades_fr.svg/langfr-300px-Queen_of_spades_fr.svg.png"
 var coeurQ = document.createElement('img');
-coeurQ.src = ""
+coeurQ.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Queen_of_hearts_fr.svg/langfr-300px-Queen_of_hearts_fr.svg.png"
 var trefleQ = document.createElement('img');
-trefleQ.src = ""
+trefleQ.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Queen_of_clubs_fr.svg/langfr-300px-Queen_of_clubs_fr.svg.png"
 
 var carreauK = document.createElement('img');
-carreauK.src = ""
+carreauK.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/King_of_diamonds_fr.svg/langfr-300px-King_of_diamonds_fr.svg.png"
 var piqueK = document.createElement('img');
-piqueK.src = ""
+piqueK.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/King_of_spades_fr.svg/langfr-300px-King_of_spades_fr.svg.png"
 var coeurK = document.createElement('img');
-coeurK.src = ""
+coeurK.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/King_of_hearts_fr.svg/langfr-300px-King_of_hearts_fr.svg.png"
 var trefleK = document.createElement('img');
-trefleK.src = ""
+trefleK.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/King_of_clubs_fr.svg/langfr-300px-King_of_clubs_fr.svg.png"
+
