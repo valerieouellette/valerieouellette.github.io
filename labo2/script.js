@@ -1,3 +1,26 @@
+class JeudeCartes {
+  constructor () {
+    this.listeCartes = ['A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦'
+    , 'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
+     'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
+      'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠']
+  }
+
+  brassageInterCoupe () {
+    let longueur = this.listeCartes.length
+    let halfLongueur = longueur / 2
+    paquetFirstHalf = this.listeCartes.slice(0,halfLongueur)
+    paquetSecondHalf = this.listeCartes.slice(halfLongueur, longueur)
+    let newPaquet = []
+    for (let i = 0; i < halfLongueur; i++) {
+      newPaquet.push(paquetFirstHalf[i])
+      newPaquet.push(paquetSecondHalf[i])
+    }
+    this.listeCartes = newPaquet
+  
+  }
+}
+
 function dicoImages () {
     let dicoImagesCartes = {"A♦" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/02_of_diamonds.svg/langfr-300px-02_of_diamonds.svg.png",
     "A♠" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/01_of_spades_A.svg/langfr-300px-01_of_spades_A.svg.png",
@@ -56,11 +79,6 @@ function dicoImages () {
 }
 
 
-
-var liste_cartes = ['A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦'
-, 'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
- 'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
-  'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠']
-
 let cartes = liste_cartes.toString()
-document.getElementsById("p1").innerHTML = cartes;
+document.querySelector('#p1').textContent = cartes
+
