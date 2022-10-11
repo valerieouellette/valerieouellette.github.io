@@ -102,6 +102,13 @@ function affichage (cartes) {
   }
 }
 
+function brasserPaquet (paquet) {
+  paquet.brassageInterCoupe();
+  cartes = paquet.listeCartes;
+  affichage(cartes);
+}
+
 const paquet = new JeudeCartes();
 cartes = paquet.listeCartes;
 affichage(cartes);
+
