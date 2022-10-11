@@ -81,6 +81,7 @@ function dicoImages () {
 
 function affichage (cartes) {
   const table = document.querySelector("table");
+  table.innerHTML = ""
   const images = dicoImages();
   for (let i = 0; i < 4; i++) {
     const tr = document.createElement("tr");
@@ -111,4 +112,7 @@ function brasserPaquet (paquet) {
 const paquet = new JeudeCartes();
 cartes = paquet.listeCartes;
 affichage(cartes);
+
+let bouton = document.querySelector("#bouton");
+bouton.addEventListener("click", brasserPaquet(paquet));
 
